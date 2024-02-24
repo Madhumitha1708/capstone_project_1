@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: rgb(0, 0, 0);
+            color:white;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        nav{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            background-color: rgb(15, 202, 83);
+            padding: 10px 30px;
+        }
+        nav ul{
+            display:flex;
+            list-style: none;
+        }
+        nav ul li{
+            margin:0 15px;
+        }
+        nav ul li a{
+            text-decoration: none;
+            color: white;
+        }
+        nav ul li a:hover{
+            color: white;
+            font-size: 19px ;
+        }
+        hr{
+            border: 0;
+            background: greenyellow;
+            height: 2px;
+            margin: 20px 0;
+        }
+        .left{
+            font-size: 1.45rem;
+        }
+        .firstsection{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            margin: 10px 0;
+        }
+        .firstsection > div{
+            width: 45%;
+            font-size: 2.5rem;
+            margin: 5px 0;
+            padding-top: 10px;
+            text-align: center;
+        }
+        .leftsection{
+            font-size: 20px;
+            padding-top: 20px;
+            margin-top: 50px;
+            justify-content: center;
+            align-items: center;
+        }
+        .leftsection .btn{
+            padding: 12px;
+            background-color: #31cf33;
+            color: black;
+            border-radius: 6px;
+            font-size: 15px;
+            cursor: pointer;
+            border: 2px solid white;
+        }
+        .btn:hover{
+            color: whitesmoke;
+            font-size: 18px;
+        }
+        .rightsection img{
+            width: 100%;
+            height: auto;
+            max-width: 400px;
+        }
+        .purple{
+            color: rgb(15, 202, 84);
+        }
+        #element{
+            color: rgb(15, 202, 84);
+        }
+        
+        .secondsection{
+            max-width: 90%;
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+        }
+        #heading{
+           padding-top: 20px;
+           font-size: 1.8rem; 
+        }
+        .text-gray{
+            color: gray;
+            font-size: small;
+        }
+        .secondsection .box{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .vertical{
+            flex: 0 0 calc(50% - 20px);
+            margin: 10px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        }
+        .vertical img{
+            width: 50px;
+            margin-bottom: 10px;
+        }
+        .vertical-title{
+            font-weight: bold;
+        }
+        .vertical-desc{
+            color: gray;
+            font-size: 0.9rem;
+        }
+        footer{
+            background-color: #40bd2a;
+            padding: 20px 0;
+        }
+        .footer{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+        }
+        footer h3{
+            font-size: 25px;
+        }
+        .footer ul{
+            list-style: none;
+            padding: 0;
+        }
+        .footer>div{
+            width: 220px;
+            text-align: center;
+        }
+        footer .footer-rights{
+            text-align: center;
+            color: #000;
+            padding: 12px 0;
+        }
+        @media screen and (max-width: 768px){
+            .firstsection > div{
+                width: 90%;
+            }
+            .secondsection .box{
+                flex-direction: column;
+            }
+            .vertical{
+                flex: 0 0 100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="left">Madhu's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="cont.html">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="firstsection">
+            <div class="leftsection">Hi, My name is <span class="purple">Madhumitha Naru</span> 
+                <div>and I am a passionate Web Developer..!</div>
+                <span id="element"></span>
+                <div class="buttons">
+                    <button class="btn" onclick="location.href='resume.pdf';">Download Resume</button>
+                    <a href="https://github.com/Madhumitha1708">
+                        <button class="btn">Visit github</button>
+                      </a>
+                      
+                </div>
+            </div>
+            <div class="rightsection">
+                <img src="bg.png" alt="">
+            </div>
+        </section>
+        <hr>
+        <section class="secondsection">
+            <span class="text-gray">What I have done so far</span>
+            <h1 id="heading">Projects</h1>
+
+            <div class="box">
+                <div class="vertical">
+                    <img class="image-top" src="cal.jpg">
+                    <div class="vertical-title">
+                        Calculator(2021-2022)
+                    </div>
+                    <div class="vertical-desc">
+                        Built a Calculator(GUI) (composing basic Math operations) using Tkinter Module in Python.
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="developer.png">
+                    <div class="vertical-title">
+                        Community Service(2022-2023)
+                    </div>
+                    <div class="vertical-desc">
+                        Project Titled "Yoga Awareness" is about spreading awareness about Yoga to remote-areas in-order to have sustainable life.
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="html.png">
+                    <div class="vertical-title">
+                        QRCode Generator(2023)
+                    </div>
+                    <div class="vertical-desc">
+                        Built Automatic QRCode Generator for any kind of text format using HTML,CSS and JavaScript.
+                    </div>
+                </div>
+                 
+                <div class="vertical">
+                    <img class="image-top" src="css.png">
+                    <div class="vertical-title">
+                        Mini Calendar(2023)
+                    </div>
+                    <div class="vertical-desc">
+                        Built a Mini-Calendar using HTML, CSS, JavaScript.
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="js.png">
+                    <div class="vertical-title">
+                        Password Generator(2024)
+                    </div>
+                    <div class="vertical-desc">
+                        Built an Automatic Password Generator using HTML, CSS, JavaScript.
+                    </div>
+                </div>
+            </div>
+           
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <div class="footer-first">
+                <h3>Madhumitha's Portfolio</h3>
+            </div>
+            <div class="footer-second">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Skills</li>
+                    <li>Projects</li>
+                    <li>Contact Me</li>
+                </ul>
+            </div>
+            <div class="footer-third">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Skills</li>
+                    <li>Projects</li>
+                    <li>Contact Me</li>
+                </ul>
+            </div>
+            <div class="footer-fourth"><ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Skills</li>
+                    <li>Projects</li>
+                <li>Contact Me</li>
+            </ul></div>
+        </div>
+        <div class="footer-rights">
+            Copyright &#169; madhusportfolio.com | All rights reserved
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+          strings: ['Front End Developer', 'Data Analyst.'],
+          typeSpeed: 50,
+        });
+      </script>
+      
+      </body>
+</html>

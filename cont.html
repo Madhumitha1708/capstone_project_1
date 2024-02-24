@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="con.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Josefin+Sans"); 
+
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+            outline: none; 
+            font-family: "Josefin Sans", sans-serif; 
+        } 
+
+        body { 
+            background: #5eb558; 
+        } 
+
+        .wrapper { 
+            position: absolute; 
+            top: 50%; 
+            left: 50%; 
+            transform: translate(-50%, -50%); 
+            max-width: 350px; 
+            width: 100%; 
+            background: #fff; 
+            padding: 25px; 
+            border-radius: 5px; 
+            box-shadow: 4px 4px 2px rgba(254, 236, 164, 1); 
+        } 
+
+        .wrapper h2 { 
+            text-align: center; 
+            margin-bottom: 20px; 
+            text-transform: uppercase; 
+            letter-spacing: 3px; 
+            color: #332902; 
+        } 
+
+        .wrapper .input_field { 
+            margin-bottom: 10px; 
+        } 
+
+        .wrapper .input_field input[type="text"], 
+        .wrapper textarea { 
+            border: 1px solid #e0e0e0; 
+            width: 100%; 
+            padding: 10px; 
+        } 
+
+        .wrapper textarea { 
+            resize: none; 
+            height: 80px; 
+        } 
+
+        .wrapper .btn input[type="submit"] { 
+            border: 0px; 
+            margin-top: 15px; 
+            padding: 10px; 
+            text-align: center; 
+            width: 100%; 
+            background: #569a4d; 
+            color: #fcfbf7; 
+            text-transform: uppercase; 
+            letter-spacing: 5px; 
+            font-weight: bold; 
+            border-radius: 25px; 
+            cursor: pointer; 
+        } 
+
+        #error_message { 
+            margin-bottom: 20px; 
+            background: #fe8b8e; 
+            padding: 10px; 
+            text-align: center; 
+            font-size: 14px; 
+            transition: all 0.5s ease; 
+        }
+
+        /* Responsive Styles */
+        @media only screen and (max-width: 600px) {
+            .wrapper {
+                max-width: 90%;
+            }
+        }
+
+        @media only screen and (max-width: 400px) {
+            .wrapper {
+                padding: 15px;
+            }
+            .wrapper .input_field input[type="text"],
+            .wrapper textarea {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper"> 
+        <h2>Contact Me</h2> 
+        <div id="error_message"></div> 
+        <form action="" id="myform" onsubmit="return validate();"> 
+            <div class="input_field"> 
+                <input type="text" placeholder="Name" id="name"> 
+            </div> 
+            <div class="input_field"> 
+                <input type="text" placeholder="Country" id="country">
+            </div> 
+            <div class="input_field"> 
+                <input type="text" placeholder="Email Address" id="email"> 
+            </div> 
+            <div class="input_field"> 
+                <input type="text" placeholder="Phone" id="phone"> 
+            </div> 
+            <div class="input_field"> 
+                <input type="text" placeholder="Enquiry" id="enquiry"> 
+            </div> 
+            <div class="input_field"> 
+                <textarea placeholder="Drop Your Queries" id="message"></textarea> 
+            </div> 
+            <div class="btn"> 
+                <input type="submit"> 
+            </div> 
+        </form> 
+    </div> 
+    <script>
+        function validate() { 
+            let name = document.getElementById("name").value; 
+            let subject = document.getElementById("subject").value; 
+            let phone = document.getElementById("phone").value; 
+            let email = document.getElementById("email").value; 
+            let message = document.getElementById("message").value; 
+            let error_message = document.getElementById("error_message"); 
+
+            error_message.style.padding = "10px"; 
+
+            let errors = []; 
+
+            if (name.length < 5) { 
+                errors.push("Please Enter a valid Name");} 
+            if (subject.length < 10) { 
+                errors.push("Please Enter a Correct Subject");} 
+            if (isNaN(phone) || phone.length != 10) { 
+                errors.push("Please Enter a valid Phone Number");} 
+            if (email.indexOf("@") == -1 || email.length < 6) { 
+                errors.push("Please Enter a valid Email");} 
+            if (message.length <= 40) { 
+                errors.push("Please Enter More Than 40 Characters");} 
+
+            if (errors.length > 0) { 
+                error_message.innerHTML = errors.join("<br>"); 
+                return false;} 
+            else { 
+                alert("Form Submitted Successfully!"); 
+                return true;}}
+    </script> 
+</body>
+</html>

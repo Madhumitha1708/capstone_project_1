@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <style>
+        body{
+            background-color: black;
+            margin: 0;
+            padding: 0;
+        }
+        .secondsection{
+            max-width: 80vw;
+            margin:  auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        #heading{
+            padding-top: 0px;
+            font-size: 1.5rem;
+            color: white;
+            text-align: center;
+        }
+        .secondsection h1{
+            font-size: 1.9rem;
+        }
+        .text-gray{
+            color: gray;
+            font-size: small;
+            text-align: center;
+        }
+        .box{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: flex-start;
+        }
+        .vertical{
+            width: calc(20% - 20px);
+            margin: 20px 0;
+            text-align: center;
+        }
+        .vertical img{
+            width: 80px;
+            margin-bottom: 10px;
+        }
+        .vertical-title{
+            color: white;
+            font-size: 1rem;
+        }
+        .vertical-desc{
+            color: gray;
+            font-size: 0.8rem;
+        }
+
+        /* Responsive Styles */
+        @media only screen and (max-width: 768px) {
+            .vertical {
+                width: calc(33.33% - 20px);
+            }
+        }
+
+        @media only screen and (max-width: 480px) {
+            .vertical {
+                width: calc(50% - 20px);
+            }
+        }
+
+        @media only screen and (max-width: 320px) {
+            .vertical {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="secondsection">
+        <h1 id="heading">Projects...<span class="text-gray">What I have done so far</span></h1>
+        <div class="box">
+            <div class="vertical">
+                <img class="image-top" src="cal.jpg">
+                <div class="vertical-title">
+                    Calculator(2021-2022)
+                </div>
+                <div class="vertical-desc">
+                    Built a Calculator(GUI) (composing basic Math operations) using Tkinter Module in Python.
+                </div>
+            </div>
+            <div class="vertical">
+                <img class="image-top" src="developer.png">
+                <div class="vertical-title">
+                    Community Service(2022-2023)
+                </div>
+                <div class="vertical-desc">
+                    Project Titled "Yoga Awareness" is about spreading awareness about Yoga to remote-areas in-order to have sustainable life.
+                </div>
+            </div>
+            <div class="vertical">
+                <img class="image-top" src="html.png">
+                <div class="vertical-title">
+                    QRCode Generator(2023)
+                </div>
+                <div class="vertical-desc">
+                    Built Automatic QRCode Generator for any kind of text format using HTML,CSS and JavaScript.
+                </div>
+            </div>
+            <div class="vertical">
+                <img class="image-top" src="css.png">
+                <div class="vertical-title">
+                    Mini Calendar(2023)
+                </div>
+                <div class="vertical-desc">
+                    Built a Mini-Calendar using HTML, CSS, JavaScript.
+                </div>
+            </div>
+            <div class="vertical">
+                <img class="image-top" src="js.png">
+                <div class="vertical-title">
+                    Password Generator(2024)
+                </div>
+                <div class="vertical-desc">
+                    Built an Automatic Password Generator using HTML, CSS, JavaScript.
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
